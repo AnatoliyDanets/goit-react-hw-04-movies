@@ -1,0 +1,28 @@
+.popular__item {
+  border-radius: 2px;
+  background-color: black;
+}
+.popular__image {
+  width: 100%;
+  height: 90%;
+  object-fit: cover;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.popular__image:hover {
+  transform: scale(1.03);
+}
+.popular__link {
+  text-decoration: none;
+  color: white;
+}
+
+.popular__info {
+  padding: 10px;
+}
+.popular__title {
+  text-decoration: none;
+  text-align: center;
+}
+.popular__link:hover {
+  color: rgb(219, 223, 20);
+}

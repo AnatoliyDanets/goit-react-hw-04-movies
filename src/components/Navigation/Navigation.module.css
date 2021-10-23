@@ -1,0 +1,13 @@
+.nav:not(:last-child) {
+  margin-right: 20px;
+}
+.nav {
+  font-size: 22px;
+  font-weight: 700;
+  text-decoration: none;
+  color: white;
+}
+
+.active {
+  color: rgb(219, 223, 20);
+}
