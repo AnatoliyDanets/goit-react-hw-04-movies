@@ -29,7 +29,7 @@ export default function Cast({ movieId }) {
                       : defaultImages
                   }
                   alt={name}
-                  width="250"
+                  // width="250"
                 />
                 <div className={s.cast_name}>
                   <h3 className={s.cast__title}>{name}</h3>

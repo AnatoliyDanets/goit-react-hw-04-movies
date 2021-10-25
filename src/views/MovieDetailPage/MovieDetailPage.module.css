@@ -3,13 +3,26 @@
   padding-top: 20px;
   padding-bottom: 20px;
 }
-.detail__info {
-  display: flex;
 
-  padding: 15px;
+.detail__info {
+  width: 100%;
+  padding: 20px 0px;
 }
+@media (min-width: 768px) {
+  .detail__info {
+    display: inline-flex;
+  }
+}
+
 .detail__image {
-  margin-right: 20px;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .detail__image {
+    width: unset;
+    margin-right: 20px;
+  }
 }
 .detail__title {
   margin-bottom: 20px;

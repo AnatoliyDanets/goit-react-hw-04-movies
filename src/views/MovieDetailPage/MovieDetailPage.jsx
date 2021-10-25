@@ -59,7 +59,7 @@ export default function MovieDetailPage() {
                   width="250"
                 />
               </div>
-              <div>
+              <div className={s.detail__info_wrapper}>
                 <h1 className={s.detail__title}>{movies.title}</h1>
                 <p className={s.detail__title_score}>
                   User Score: {movies.vote_average * 10}%
