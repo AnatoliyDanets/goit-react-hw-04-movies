@@ -1,6 +1,7 @@
 .popular__item {
   border-radius: 2px;
   background-color: black;
+  padding-bottom: 5px;
 }
 .popular__image {
   width: 100%;
@@ -17,10 +18,12 @@
 }
 
 .popular__info {
-  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
 }
 .popular__title {
-  text-decoration: none;
   text-align: center;
 }
 .popular__link:hover {

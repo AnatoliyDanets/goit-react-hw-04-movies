@@ -16,22 +16,39 @@
 
 .detail__image {
   width: 100%;
+  height: auto;
 }
 
 @media (min-width: 768px) {
   .detail__image {
-    width: unset;
+    width: 300px;
     margin-right: 20px;
   }
 }
 .detail__title {
   margin-bottom: 20px;
 }
+
+@media (min-width: 768px) {
+  .detail__title {
+    margin-bottom: 10px;
+  }
+}
 .detail__title_score {
   margin-bottom: 20px;
 }
+@media (min-width: 768px) {
+  .detail__title_score {
+    margin-bottom: 10px;
+  }
+}
 .detail__title_avantages {
   margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+  .detail__title_avantages {
+    margin-bottom: 10px;
+  }
 }
 .detail__add_wrap {
   padding: 15px;
@@ -44,14 +61,20 @@
   display: flex;
   justify-content: center;
 }
-.detail__genres,
+.detail__genres {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  margin-bottom: 20px;
+}
 .detail_add_list {
   margin: 0;
   padding: 0;
   list-style: none;
   display: flex;
 }
-.detail__genres_item,
+.detail__genres_item:not(:last-child),
 .detail_add_item:not(:last-child) {
   margin-right: 5px;
 }

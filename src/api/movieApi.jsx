@@ -9,9 +9,9 @@ export async function movieAPI(url = "", config = {}) {
   return await Promise.reject(new Error(`no images on request`));
 }
 
-export function fetchMovieTrend() {
+export function fetchMovieTrend(lang) {
   return movieAPI(
-    `${BASE_URL}trending/all/day?api_key=${API_KEY}&language=en-US&page=1`
+    `${BASE_URL}trending/movie/day?api_key=${API_KEY}&page=1&language=${lang}`
   );
 }
 export function fetchSearch(query) {
@@ -20,9 +20,9 @@ export function fetchSearch(query) {
   );
 }
 
-export function fetchMovieDetails(movieId) {
+export function fetchMovieDetails(movieId, lang) {
   return movieAPI(
-    `${BASE_URL}movie/${movieId}?api_key=${API_KEY}&language=en-US`
+    `${BASE_URL}movie/${movieId}?api_key=${API_KEY}&language=${lang}`
   );
 }
 
@@ -34,5 +34,17 @@ export function fetchActorsDetail(movieId) {
 export function fetchReviews(movieId) {
   return movieAPI(
     `${BASE_URL}movie/${movieId}/reviews?api_key=${API_KEY}&language=en-US&page=1`
+  );
+}
+
+export function fetchVideoTrailer(movieId) {
+  return movieAPI(
+    `${BASE_URL}movie/${movieId}/videos?api_key=${API_KEY}&language=en-US`
+  );
+}
+
+export function fetchLanguage(movieId) {
+  return movieAPI(
+    `${BASE_URL}movie/${movieId}/translations?api_key=${API_KEY}`
   );
 }

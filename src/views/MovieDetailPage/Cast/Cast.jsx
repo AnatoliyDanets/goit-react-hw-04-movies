@@ -10,7 +10,7 @@ export default function Cast({ movieId }) {
       .fetchActorsDetail(movieId)
       .then((actor) => {
         console.log(actor);
-        setCast(actor.cast);
+        setCast(actor.cast.slice(0, 12));
       })
       .catch((error) => console.log(error));
   }, [movieId]);
