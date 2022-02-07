@@ -7,11 +7,9 @@ export default function Trailer({ movieId }) {
     api
       .fetchVideoTrailer(movieId)
       .then((movie) => {
-        console.log(movie);
-
-        setTrailer(movie.results[0]);
+        setTrailer(movie.results[0] || [1]);
       })
-      .catch((error) => console.log(error.message));
+      .catch((error) => error.message);
   }, [movieId]);
   return (
     <div className={s.trailer__wrap}>

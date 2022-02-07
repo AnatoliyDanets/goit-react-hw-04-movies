@@ -25,8 +25,30 @@
   cursor: pointer;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+.show {
+  padding: 10px 25px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  min-width: 50px;
+  background-color: black;
+  color: white;
+  outline: none;
+  border: 1px solid white;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 .detail__btn:hover {
   background-color: black;
-  color: rgb(219, 223, 20);
+  color: #dee114;
+}
+.show:hover {
+  background-color: #fff;
+  border: 1px solid #000;
+  color: #000;
+}
+
+.Pagination {
+  display: flex;
+  justify-content: center;
 }

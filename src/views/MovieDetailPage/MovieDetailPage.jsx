@@ -33,7 +33,6 @@ export default function MovieDetailPage() {
     genres: { en: "Genres", ru: "Жанры" },
   };
 
-  console.log(location);
   const fetchFilms = async (lang) => {
     const movie = await api.fetchMovieDetails(movieId, lang);
     const films = setMovies(movie);
@@ -44,7 +43,6 @@ export default function MovieDetailPage() {
     fetchFilms(EN);
   }, [EN]);
 
-  console.log(movies);
   // const getRusLang = () => {
   //   api
   //     .fetchLanguage(movieId)

@@ -9,9 +9,9 @@ export async function movieAPI(url = "", config = {}) {
   return await Promise.reject(new Error(`no images on request`));
 }
 
-export function fetchMovieTrend(lang) {
+export function fetchMovieTrend(lang, page) {
   return movieAPI(
-    `${BASE_URL}trending/movie/day?api_key=${API_KEY}&page=1&language=${lang}`
+    `${BASE_URL}trending/movie/day?api_key=${API_KEY}&page=${page}&language=${lang}`
   );
 }
 export function fetchSearch(query) {

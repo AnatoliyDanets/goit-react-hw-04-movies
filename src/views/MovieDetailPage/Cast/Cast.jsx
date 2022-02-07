@@ -9,10 +9,9 @@ export default function Cast({ movieId }) {
     api
       .fetchActorsDetail(movieId)
       .then((actor) => {
-        console.log(actor);
         setCast(actor.cast.slice(0, 12));
       })
-      .catch((error) => console.log(error));
+      .catch((error) => error.message);
   }, [movieId]);
   return (
     <div className={s.cast__wrap}>
